@@ -32,7 +32,7 @@ UF2=$(find . -name '*.uf2')
 
 echo "UF2 file is at: ${UF2}"
 
-sudo cp '${UF2}' /mnt/pico
+sudo cp "${UF2}" /mnt/pico
 sudo sync
 
 #Reading pico output
