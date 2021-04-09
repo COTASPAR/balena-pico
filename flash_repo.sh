@@ -26,7 +26,7 @@ echo "Build finished"
 
 
 #Flashing pico
-UF2=$(find . -name '*.elf')
-echo "UF2 file is at: ${UF2}"
-openocd -f interface/raspberrypi-swd.cfg -f target/rp2040.cfg -c 'program '"$UF2"' verify reset exit'
+ELF=$(find . -name '*.elf')
+echo "ELF file is at: ${ELF}"
+openocd -f interface/raspberrypi-swd.cfg -f target/rp2040.cfg -c "program {$ELF} verify reset exit"
 #------------------------------------------------------------------------------
