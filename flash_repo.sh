@@ -26,7 +26,7 @@ echo "Build finished"
 
 
 #Flashing pico
-ELF=$(find . -maxdepth 0 -name '*.elf')
+ELF=$(find . -maxdepth 1 -name '*.elf')
 echo "ELF file is at: ${ELF}"
 openocd -f interface/raspberrypi-swd.cfg -f target/rp2040.cfg -c "program {$ELF} verify reset exit"
 #------------------------------------------------------------------------------
