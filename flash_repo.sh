@@ -7,7 +7,7 @@ if [ $# -eq 0 ]
   else
     echo "External epo supplied, cloning ..."
     git clone $1
-    cd $1
+    cd "{$1}"
 fi
 #-----------------------------------------------------------------------------
 
